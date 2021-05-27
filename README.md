@@ -3,7 +3,7 @@
 a repository that contains the holberton-headphones project.  In this project, I implemented from scratch, without any library, a web page. I used all HTML/CSS/Accessibility/Responsive design acquired knowledges from previous projects.
 
 <p align="center">
-  <img src="Template.jpg"
+  <img src="alldevices.jpg"
        alt="Template">
 </p>
 
