@@ -6,7 +6,7 @@ Page View from diffrent devices:
 
 <p align="center">
   <img src="alldevices.jpg"
-       alt="Template">
+       alt="Template" style="border-radius: 10px;">
 </p>
 
 
