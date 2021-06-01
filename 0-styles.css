@@ -336,7 +336,7 @@
     position:  center;
   }
 
-.main_button {
+  .main_button {
     background-color: var(--color-primary);
     color: var(--color-white);
     outline: none;

@@ -393,10 +393,10 @@
   }
 
   .card-what_we_do span {
-    color: var(--color-black);
+    color: var(--color-primary);
   }
 
-  .card-what_we_do h3, .card-services p{
+  .card-what_we_do h4, .card-services p{
       color: var(--color-black);
   }
 
@@ -413,6 +413,13 @@
     width: 25%;
   }
   
+
+  .row p {
+      color: var(--color-black);
+      margin-top:-5px;
+  }
+
+
   .what_we_do .section-title {
     margin-bottom: 5rem;
   }
@@ -441,6 +448,10 @@
 
     .section-hero .section-body {
       padding: 2rem;
+    }
+
+    .row li {
+      width: 100%;
     }
   }
 
