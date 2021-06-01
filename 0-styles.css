@@ -32,29 +32,12 @@
     --font-size-xx-large: 4.8rem;
   
     --font-weight-regular: 400;
-    --font-weight-bold: 700;
+    --font-weight-bold: 580;
   
     --line-height-small: 1.2;
     --line-height-base: 1.5;
     --line-height-big: 1.8;
   
-    /** SECTION **/
-    --section-padding: 5rem 0;
-    --section-header-padding: 0 0 3rem;
-    --section-header-align: center;
-    --section-title-font-size: var(--font-size-xx-large);
-    --section-title-font-weight: var(--font-weight-bold);
-    --section-title-line-height: var(--line-height-small);
-    --section-title-margin: 0;
-    --section-title-color: var(--color-black);
-    --section-tagline-transform: uppercase;
-    --section-tagline-color: var(--color-primary);
-    --section-tagline-font-family: var(--font-family-headings);
-    --section-tagline-font-weight: var(--font-weight-bold);
-    --section-tagline-margin: 0;
-    --section-body-padding: 2rem 0 4rem;
-    --section-footer-padding: 3rem 0 0;
-    --section-footer-align: center;
   
     /** HEADER **/
     --header-padding: 4rem 0 0;
@@ -63,7 +46,7 @@
     --footer-padding: 5rem 0 1rem;
   
     /** NAVBAR **/
-    --nav-item-font-family: var(--font-family-headings);
+    --nav-item-font-family: var(--font-family-base);
     --nav-item-font-weight: var(--font-weight-bold);
     --nav-item-font-size: var(--font-size-medium);
     --nav-item-letter-spacing: .04rem;
@@ -119,6 +102,13 @@
     margin: -10px auto;
   }
 
+  span {
+    font-family: var(--font-family-title);
+    color: var(--color-white);
+    text-align: center;
+    padding-top: 1px;
+  }
+
   
   a {
     color: var(--text-color);
@@ -147,7 +137,7 @@
 
 
   /* Header
-      ============================= */
+    ============================= */
   
   .header {
     padding: var(--header-padding);
@@ -174,7 +164,7 @@
   .menu-icon .navicon {
     background: var(--color-white);
     display: block;
-    width: 2rem;
+    width: 1rem;
     height: .2rem;
     position: relative;
     transition: background .2s ease-out;
@@ -189,6 +179,8 @@
     position: absolute;
     background: var(--color-white);
     transition: all .2s ease-out;
+    width: 2rem;
+    height: .2rem;
   }
 
   .header .menu-icon .navicon::before {
@@ -229,7 +221,7 @@
   .nav .nav-link:hover {
     color: var(--color-primary);
     text-decoration: none;
-}
+  }
   
   .nav .nav-link::before {
     content: '';
@@ -264,16 +256,16 @@
 
 
 
-.header-logo{
-margin-left: 150px;
-}
+  .header-logo {
+    margin-left: 150px;
+  }
 
 
-.background_image {
-  max-width: 100%;
-  height:  800px;
-  position:  center;
-}
+  .background_image {
+    max-width: 100%;
+    height:  800px;
+    position:  center;
+  }
 
 
 .main_button {
@@ -304,7 +296,7 @@ margin-left: 150px;
     margin: 0 auto;
 }
 
-/**  @media screen and (max-width: 480px){
+/**@media screen and (max-width: 480px){
     html {
       font-size: 57%;
     }
@@ -314,13 +306,76 @@ margin-left: 150px;
     html {
       font-size: 60%;
     }
+  }**/
+
+
+
+  /* menu btn */
+
+  .header .menu-btn {
+    display: none;
   }
-**/
 
+  .menu-btn:checked ~ .navbar-menu {
+    display: block;
+  }
 
-.menu-btn {
-  display: none;
-}
+  .menu-btn:checked ~ .navbar-menu .nav {
+    max-height: 100%;
+    overflow: inherit;
+    margin-left: 50px;
+    line-height: 5;
+
+  }
+
+  .header .menu-btn:checked + .menu-icon .navicon {
+    background: transparent;
+  }
+
+  .header .menu-btn:checked + .menu-icon .navicon::before {
+    transform: rotate(-45deg);
+  }
+
+  .header .menu-btn:checked + .menu-icon .navicon::after {
+    transform: rotate(45deg);
+  }
+
+  .header .menu-btn:checked + .menu-icon .navicon::before, .header .menu-btn:checked + .menu-icon .navicon::after{
+    top: 0;
+  }
+
+  @media screen and (max-width: 767px) {
+    :root {
+      --header-padding: 2rem 0 0;
+    }
+
+    .header {
+      background: var(--color-black);
+    }
+
+    .header-container {
+      flex-wrap: wrap;
+      padding: 0 1.5rem;
+    }
+
+    .header .menu-icon {
+      display: block;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .header-logo {
+      flex-basis: 70%;
+      margin-left: 100px;
+    }
+  }
+
+  @media screen and (max-width: 767px) and (min-width: 481px) {
+    .header-logo {
+      flex-basis: 79%;
+      margin-left: 100px;
+    }
+  }
 
 
 
