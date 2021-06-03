@@ -340,6 +340,7 @@
 
   }
 
+
 .main_button {
     background-color: var(--color-primary);
     color: var(--color-white);
@@ -460,7 +461,7 @@
   }
 
 
-/**@media screen and (max-width: 480px){
+@media screen and (max-width: 480px){
     html {
       font-size: 57%;
     }
@@ -470,5 +471,4 @@
     html {
       font-size: 60%;
     }
-  }**/
-
+  }

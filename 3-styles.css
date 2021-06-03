@@ -277,6 +277,21 @@
 
   }
 
+  .header .menu-btn:checked + .menu-icon .navicon {
+    background: transparent;
+  }
+
+  .header .menu-btn:checked + .menu-icon .navicon::before {
+    transform: rotate(-45deg);
+  }
+
+  .header .menu-btn:checked + .menu-icon .navicon::after {
+    transform: rotate(45deg);
+  }
+
+  .header .menu-btn:checked + .menu-icon .navicon::before, .header .menu-btn:checked + .menu-icon .navicon::after{
+    top: 0;
+  }
 
   @media screen and (max-width: 767px) {
     :root {
@@ -310,7 +325,6 @@
       margin-left: 100px;
     }
   }
-
 
   /* big_wrapper
       ============================= */
@@ -580,8 +594,7 @@
       ============================= */
   
   .contact_us {
-    position: relative;
-    
+    position: relative;  
     text-align: center;
   }
 
@@ -640,15 +653,9 @@ input[type] {
 }
 
   
-  @media only screen and (max-width:880px) {
-    .menu-icon {
-      display: block;
-      margin-right: 60rem;
-      z-index: -1;
-    
-    }
 
-/**@media screen and (max-width: 480px){
+
+@media screen and (max-width: 480px){
     html {
       font-size: 57%;
     }
@@ -658,5 +665,5 @@ input[type] {
     html {
       font-size: 60%;
     }
-  }**/
+  }
 
